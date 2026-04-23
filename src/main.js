@@ -4,12 +4,19 @@ import './style.css'
 
 import { productos } from './data/producto.js'
 import { mostrarHero, mostrarCatalogo } from './components/catalogo.js'
+import { configuracionPrincipalEventos, mostarModalDetalles } from './components/catalogo.js'
+
 
 function inicializarApp(){
   document.querySelector('#app').innerHTML = `
     ${ mostrarHero() }
     ${ mostrarCatalogo() }
-  `
+
+
+    ${ mostarModalDetalles() }
+
+  `;
+  configuracionPrincipalEventos()
 }
 
 inicializarApp();
